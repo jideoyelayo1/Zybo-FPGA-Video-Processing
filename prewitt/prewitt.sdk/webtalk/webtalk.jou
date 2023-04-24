@@ -2,11 +2,11 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # 
-# Start of session at: Thu Apr  6 18:43:04 2023
-# Process ID: 8820
-# Current directory: C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.sdk/webtalk
+# Start of session at: Mon Apr 24 22:06:28 2023
+# Process ID: 13808
+# Current directory: C:/Users/JideO/Documents/Programing_Projects/Zybo-FPGA-Video-Processing/prewitt/prewitt.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
-# Log file: C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.sdk/webtalk/webtalk.log
-# Journal file: C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.sdk/webtalk\webtalk.jou
+# Log file: C:/Users/JideO/Documents/Programing_Projects/Zybo-FPGA-Video-Processing/prewitt/prewitt.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/JideO/Documents/Programing_Projects/Zybo-FPGA-Video-Processing/prewitt/prewitt.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl
