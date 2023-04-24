@@ -1,0 +1,434 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr 24 20:54:44 2023
+# Process ID: 26040
+# Current directory: C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.runs/system_video_processing_0_0_synth_1
+# Command line: vivado.exe -log system_video_processing_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_video_processing_0_0.tcl
+# Log file: C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.runs/system_video_processing_0_0_synth_1/system_video_processing_0_0.vds
+# Journal file: C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.runs/system_video_processing_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source system_video_processing_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/JideO/Documents/Programing_Projects/FPGA/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.ipdefs/repo_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top system_video_processing_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'system_video_processing_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2432 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 747.449 ; gain = 178.543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_video_processing_0_0' [c:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/bd/system/ip/system_video_processing_0_0/synth/system_video_processing_0_0.vhd:74]
+	Parameter DATA_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'video_processing' declared at 'C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:3' bound to instance 'U0' of component 'video_processing' [c:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/bd/system/ip/system_video_processing_0_0/synth/system_video_processing_0_0.vhd:112]
+INFO: [Synth 8-6157] synthesizing module 'video_processing' [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:3]
+	Parameter DATA_WIDTH bound to: 24 - type: integer 
+	Parameter HDMI_LENGTH bound to: 1800 - type: integer 
+	Parameter HDMI_DEPTH bound to: 1080 - type: integer 
+	Parameter DATA_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:70]
+INFO: [Synth 8-6157] synthesizing module 'sqrt_fn' [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/sqrt.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sqrt_fn' (1#1) [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/sqrt.v:3]
+WARNING: [Synth 8-689] width (17) of port connection 'x' does not match port width (16) of module 'sqrt_fn' [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:175]
+WARNING: [Synth 8-689] width (8) of port connection 'y' does not match port width (16) of module 'sqrt_fn' [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:176]
+INFO: [Synth 8-6155] done synthesizing module 'video_processing' (2#1) [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:3]
+INFO: [Synth 8-256] done synthesizing module 'system_video_processing_0_0' (3#1) [c:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/bd/system/ip/system_video_processing_0_0/synth/system_video_processing_0_0.vhd:74]
+WARNING: [Synth 8-3331] design video_processing has unconnected port sw[2]
+WARNING: [Synth 8-3331] design video_processing has unconnected port sw[1]
+WARNING: [Synth 8-3331] design video_processing has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 814.750 ; gain = 245.844
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 814.750 ; gain = 245.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 814.750 ; gain = 245.844
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 930.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 932.723 ; gain = 1.965
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 932.723 ; gain = 363.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 932.723 ; gain = 363.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 932.723 ; gain = 363.816
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/sqrt.v:20]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:114]
+WARNING: [Synth 8-327] inferring latch for variable 'xn_reg' [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/sqrt.v:20]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 932.723 ; gain = 363.816
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 3     
+	   7 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 3     
+	               24 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	              14K Bit         RAMs := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     25 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module sqrt_fn 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
+Module video_processing 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 3     
+	   7 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 3     
+	               24 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	              14K Bit         RAMs := 3     
++---Muxes : 
+	   4 Input     25 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'U0/outMatrix_reg[0][24:0]' into 'U0/outMatrix_reg[0][24:0]' [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:72]
+INFO: [Synth 8-4471] merging register 'U0/outMatrix_reg[2][24:0]' into 'U0/outMatrix_reg[2][24:0]' [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:72]
+INFO: [Synth 8-4471] merging register 'U0/PrewittX_reg[7:0]' into 'U0/PrewittX_reg[7:0]' [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:158]
+INFO: [Synth 8-4471] merging register 'U0/PrewittY_reg[7:0]' into 'U0/PrewittY_reg[7:0]' [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:155]
+INFO: [Synth 8-3936] Found unconnected internal register 'U0/PrewittProd_reg' and it is trimmed from '17' to '16' bits. [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:162]
+INFO: [Synth 8-3936] Found unconnected internal register 'U0/outMatrix_reg[1]' and it is trimmed from '25' to '8' bits. [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:72]
+INFO: [Synth 8-3936] Found unconnected internal register 'U0/outMatrix_reg[2]' and it is trimmed from '25' to '8' bits. [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:72]
+INFO: [Synth 8-3936] Found unconnected internal register 'U0/outMatrix_reg[0]' and it is trimmed from '25' to '8' bits. [C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.srcs/sources_1/new/vid_proc.v:72]
+DSP Debug: swapped A/B pins for adder 0000012B323E0CC0
+DSP Debug: swapped A/B pins for adder 0000012B2B141E10
+WARNING: [Synth 8-3331] design system_video_processing_0_0 has unconnected port i_vid_data[17]
+WARNING: [Synth 8-3331] design system_video_processing_0_0 has unconnected port i_vid_data[16]
+WARNING: [Synth 8-3331] design system_video_processing_0_0 has unconnected port i_vid_data[10]
+WARNING: [Synth 8-3331] design system_video_processing_0_0 has unconnected port i_vid_data[9]
+WARNING: [Synth 8-3331] design system_video_processing_0_0 has unconnected port i_vid_data[8]
+WARNING: [Synth 8-3331] design system_video_processing_0_0 has unconnected port i_vid_data[0]
+WARNING: [Synth 8-3331] design system_video_processing_0_0 has unconnected port sw[2]
+WARNING: [Synth 8-3331] design system_video_processing_0_0 has unconnected port sw[1]
+WARNING: [Synth 8-3331] design system_video_processing_0_0 has unconnected port sw[0]
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[0]' (FDR) to 'U0/o_vid_data_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[1]' (FDR) to 'U0/o_vid_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[2]' (FDR) to 'U0/o_vid_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[3]' (FDR) to 'U0/o_vid_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[4]' (FDR) to 'U0/o_vid_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[5]' (FDR) to 'U0/o_vid_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[6]' (FDR) to 'U0/o_vid_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[7]' (FDR) to 'U0/o_vid_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[8]' (FDR) to 'U0/o_vid_data_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[9]' (FDR) to 'U0/o_vid_data_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[10]' (FDR) to 'U0/o_vid_data_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[11]' (FDR) to 'U0/o_vid_data_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[12]' (FDR) to 'U0/o_vid_data_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[13]' (FDR) to 'U0/o_vid_data_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[14]' (FDR) to 'U0/o_vid_data_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/o_vid_data_reg[15]' (FDR) to 'U0/o_vid_data_reg[23]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 932.723 ; gain = 363.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------------------+-----------------+-----------+----------------------+-------------------------------------------------------------+
+|Module Name                 | RTL Object      | Inference | Size (Depth x Width) | Primitives                                                  | 
++----------------------------+-----------------+-----------+----------------------+-------------------------------------------------------------+
+|system_video_processing_0_0 | U0/lineBuf0_reg | Implied   | 2 K x 8              | RAM16X1D x 8  RAM64X1D x 58  RAM128X1D x 112  RAM64M x 58   | 
+|system_video_processing_0_0 | U0/lineBuf2_reg | Implied   | 2 K x 8              | RAM16X1D x 8  RAM64X1D x 58  RAM128X1D x 112  RAM64M x 58   | 
+|system_video_processing_0_0 | U0/lineBuf1_reg | Implied   | 2 K x 8              | RAM16X1D x 8  RAM64X1D x 58  RAM128X1D x 112  RAM64M x 58   | 
++----------------------------+-----------------+-----------+----------------------+-------------------------------------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 932.723 ; gain = 363.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 932.723 ; gain = 363.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++----------------------------+-----------------+-----------+----------------------+-------------------------------------------------------------+
+|Module Name                 | RTL Object      | Inference | Size (Depth x Width) | Primitives                                                  | 
++----------------------------+-----------------+-----------+----------------------+-------------------------------------------------------------+
+|system_video_processing_0_0 | U0/lineBuf0_reg | Implied   | 2 K x 8              | RAM16X1D x 8  RAM64X1D x 58  RAM128X1D x 112  RAM64M x 58   | 
+|system_video_processing_0_0 | U0/lineBuf2_reg | Implied   | 2 K x 8              | RAM16X1D x 8  RAM64X1D x 58  RAM128X1D x 112  RAM64M x 58   | 
+|system_video_processing_0_0 | U0/lineBuf1_reg | Implied   | 2 K x 8              | RAM16X1D x 8  RAM64X1D x 58  RAM128X1D x 112  RAM64M x 58   | 
++----------------------------+-----------------+-----------+----------------------+-------------------------------------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 1000.289 ; gain = 431.383
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:45 . Memory (MB): peak = 1004.992 ; gain = 436.086
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:45 . Memory (MB): peak = 1004.992 ; gain = 436.086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 1004.992 ; gain = 436.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 1004.992 ; gain = 436.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 1004.992 ; gain = 436.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 1004.992 ; gain = 436.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |   382|
+|2     |LUT1      |    69|
+|3     |LUT2      |   296|
+|4     |LUT3      |   142|
+|5     |LUT4      |   753|
+|6     |LUT5      |   611|
+|7     |LUT6      |   747|
+|8     |RAM128X1D |   336|
+|9     |RAM16X1D  |    24|
+|10    |RAM64M    |   174|
+|11    |RAM64X1D  |   174|
+|12    |FDRE      |   226|
+|13    |FDSE      |     8|
+|14    |LD        |    16|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------------+-----------------+------+
+|      |Instance            |Module           |Cells |
++------+--------------------+-----------------+------+
+|1     |top                 |                 |  3958|
+|2     |  U0                |video_processing |  3958|
+|3     |    nolabel_line174 |sqrt_fn          |  1565|
++------+--------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 1004.992 ; gain = 436.086
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1004.992 ; gain = 318.113
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 1004.992 ; gain = 436.086
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1106 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 16 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1004.992 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 724 instances were transformed.
+  LD => LDCE (inverted pins: G): 16 instances
+  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 336 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 24 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 174 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 174 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:58 . Memory (MB): peak = 1004.992 ; gain = 712.898
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1004.992 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.runs/system_video_processing_0_0_synth_1/system_video_processing_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1004.992 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt/prewitt.runs/system_video_processing_0_0_synth_1/system_video_processing_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_video_processing_0_0_utilization_synth.rpt -pb system_video_processing_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 24 20:55:55 2023...
