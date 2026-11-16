@@ -1,0 +1,70 @@
+## prewitt  (project part xc7z020clg400-1)
+- whole design, placed: prewitt/prewitt.runs/impl_1/system_wrapper_utilization_placed.rpt (Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019; Mon Apr 24 21:10:40 2023; 7z020clg400-1)
+    Slice LUTs               12616 (23.71%)
+    LUT as Logic             9905 (18.62%)
+    LUT as Distributed RAM   2482
+    Slice Registers          10951 (10.29%)
+    Register as Flip Flop    10935 (10.28%)
+    Register as Latch        16 (0.02%)
+    Block RAM Tile           10.5 (7.50%)
+    DSPs                     0 (0.00%)
+- video_processing only, synthesised out of context: prewitt/prewitt.runs/system_video_processing_0_0_synth_1/system_video_processing_0_0_utilization_synth.rpt (Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019; Mon Apr 24 20:55:54 2023; 7z020clg400-1)
+    Slice LUTs               4872 (9.16%)
+    LUT as Logic             2436 (4.58%)
+    LUT as Distributed RAM   2436
+    Slice Registers          250 (0.23%)
+    Register as Flip Flop    234 (0.22%)
+    Register as Latch        16 (0.02%)
+    Block RAM Tile           0 (0.00%)
+    DSPs                     0 (0.00%)
+- timing: prewitt/prewitt.runs/impl_1/system_wrapper_timing_summary_routed.rpt (Mon Apr 24 21:13:09 2023)
+    design WNS -92.154 ns, TNS -10632.780 ns, 3952 of 46915 setup endpoints failing; WHS -1.038 ns, THS -2.033 ns, 2 of 46798 hold endpoints failing
+    report says: Timing constraints are not met.
+    pixel_dynclk: period 6.734 ns (148.500 MHz); WNS -92.154 ns, TNS -10627.920 ns, 3950 of 25904 endpoints failing; worst path needs about 98.888 ns
+    dphy_hs_clock_p: period 4.761 ns (210.040 MHz); WNS -2.450 ns, TNS -4.862 ns, 2 of 2 endpoints failing
+    path slack -92.154 ns, 98.761 ns over 330 levels: video_processing_0/U0/PrewittProd_reg[1]/C -> video_processing_0/U0/out_reg[5]/D
+    path slack -92.055 ns, 98.661 ns over 330 levels: video_processing_0/U0/PrewittProd_reg[1]/C -> video_processing_0/U0/out_reg[7]/D
+    path slack -91.840 ns, 98.521 ns over 330 levels: video_processing_0/U0/PrewittProd_reg[1]/C -> video_processing_0/U0/out_reg[4]/D
+    path slack -91.840 ns, 98.446 ns over 328 levels: video_processing_0/U0/PrewittProd_reg[1]/C -> video_processing_0/U0/out_reg[2]/D
+    path slack -91.717 ns, 98.323 ns over 328 levels: video_processing_0/U0/PrewittProd_reg[1]/C -> video_processing_0/U0/out_reg[3]/D
+    path slack -91.666 ns, 98.273 ns over 328 levels: video_processing_0/U0/PrewittProd_reg[1]/C -> video_processing_0/U0/out_reg[1]/D
+    path slack -91.556 ns, 98.162 ns over 329 levels: video_processing_0/U0/PrewittProd_reg[1]/C -> video_processing_0/U0/out_reg[6]/D
+    path slack -91.419 ns, 98.025 ns over 328 levels: video_processing_0/U0/PrewittProd_reg[1]/C -> video_processing_0/U0/out_reg[0]/D
+    path slack -13.660 ns, 20.387 ns over 6 levels: video_processing_0/U0/XPtr_reg[0]/C -> video_processing_0/U0/outMatrix_reg[0][2]/D
+    path slack -13.649 ns, 20.413 ns over 6 levels: video_processing_0/U0/XPtr_reg[0]/C -> video_processing_0/U0/outMatrix_reg[1][2]/D
+
+## sobel  (project part xc7z020clg400-1)
+- whole design, placed: sobel/sobel.runs/impl_1/system_wrapper_utilization_placed.rpt (Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019; Mon Apr 24 20:56:50 2023; 7z020clg400-1)
+    Slice LUTs               12592 (23.67%)
+    LUT as Logic             9881 (18.57%)
+    LUT as Distributed RAM   2482
+    Slice Registers          10947 (10.29%)
+    Register as Flip Flop    10931 (10.27%)
+    Register as Latch        16 (0.02%)
+    Block RAM Tile           10.5 (7.50%)
+    DSPs                     0 (0.00%)
+- video_processing only, synthesised out of context: sobel/sobel.runs/system_video_processing_0_0_synth_1/system_video_processing_0_0_utilization_synth.rpt (Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019; Mon Apr 24 20:50:12 2023; 7z020clg400-1)
+    Slice LUTs               4845 (9.11%)
+    LUT as Logic             2409 (4.53%)
+    LUT as Distributed RAM   2436
+    Slice Registers          246 (0.23%)
+    Register as Flip Flop    230 (0.22%)
+    Register as Latch        16 (0.02%)
+    Block RAM Tile           0 (0.00%)
+    DSPs                     0 (0.00%)
+- timing: sobel/sobel.runs/impl_1/system_wrapper_timing_summary_routed.rpt (Mon Apr 24 20:59:35 2023)
+    design WNS -90.287 ns, TNS -13914.494 ns, 3882 of 46907 setup endpoints failing; WHS -1.038 ns, THS -2.033 ns, 2 of 46790 hold endpoints failing
+    report says: Timing constraints are not met.
+    pixel_dynclk: period 6.734 ns (148.500 MHz); WNS -90.287 ns, TNS -13909.632 ns, 3880 of 25896 endpoints failing; worst path needs about 97.021 ns
+    dphy_hs_clock_p: period 4.761 ns (210.040 MHz); WNS -2.450 ns, TNS -4.862 ns, 2 of 2 endpoints failing
+    path slack -90.287 ns, 96.942 ns over 329 levels: video_processing_0/U0/sobelProd_reg[0]/C -> video_processing_0/U0/out_reg[4]/D
+    path slack -90.221 ns, 96.877 ns over 329 levels: video_processing_0/U0/sobelProd_reg[0]/C -> video_processing_0/U0/out_reg[5]/D
+    path slack -90.189 ns, 96.793 ns over 328 levels: video_processing_0/U0/sobelProd_reg[0]/C -> video_processing_0/U0/out_reg[3]/D
+    path slack -90.171 ns, 96.777 ns over 329 levels: video_processing_0/U0/sobelProd_reg[0]/C -> video_processing_0/U0/out_reg[6]/D
+    path slack -90.140 ns, 96.746 ns over 329 levels: video_processing_0/U0/sobelProd_reg[0]/C -> video_processing_0/U0/out_reg[7]/D
+    path slack -89.970 ns, 96.577 ns over 328 levels: video_processing_0/U0/sobelProd_reg[0]/C -> video_processing_0/U0/out_reg[2]/D
+    path slack -89.627 ns, 96.231 ns over 328 levels: video_processing_0/U0/sobelProd_reg[0]/C -> video_processing_0/U0/out_reg[1]/D
+    path slack -89.483 ns, 96.090 ns over 328 levels: video_processing_0/U0/sobelProd_reg[0]/C -> video_processing_0/U0/out_reg[0]/D
+    path slack -11.143 ns, 17.763 ns over 6 levels: video_processing_0/U0/XPtr_reg[5]/C -> video_processing_0/U0/out0[-1111111105]__0/D
+    path slack -11.125 ns, 17.789 ns over 6 levels: video_processing_0/U0/XPtr_reg[5]/C -> video_processing_0/U0/out5[-1111111105]/D
+
