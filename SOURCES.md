@@ -84,9 +84,6 @@ only be checked in Vivado, so it is not done here.
 
 - `*/sources_1/imports/vivado_proj/archive_project_summary.txt` names the starting
   point: Digilent's `Zybo-Z7-20-pcam-5c` project.
-- The synthesis logs record the build folders: Prewitt under
-  `C:/Users/JideO/Documents/Warwick/ES4F3_GroupJ/prewitt`, Sobel under
-  `C:/Users/JideO/Documents/Programing_Projects/Zybo-FPGA-Video-Processing/sobel`.
 - The `.xpr` files point at an IP repository outside this repository
   (`$PPRDIR/../../FPGA/Zybo-Z7-20-pcam-5c-2019.1/...`); see the README for what to do
   when Vivado reports it missing.
