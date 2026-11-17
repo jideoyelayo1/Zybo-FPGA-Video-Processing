@@ -1,0 +1,92 @@
+# RTL (Icarus) vs bit-accurate model, and figures derived from the RTL outputs
+# host: arm64 Darwin 27.0.0; Icarus Verilog version 13.0 (stable) (v13_0); Python 3.15.0
+# stimulus seed 1; short frames 32 active lines x 2 frames; comparison over every displayed (o_vid_VDE=1) output word
+
+variant  timing   frame    lines frames mode   pixels_model pixels_rtl mismatches
+prewitt  1080p60  noise       32      2 Y            122880     122880          0
+prewitt  1080p60  noise       32      2 X            122880     122880          0
+prewitt  1080p60  noise       32      2 mag          122880     122880          0
+prewitt  1080p60  noise       32      2 white        122880     122880          0
+prewitt  1080p60  noise       32      2 gray         122880     122880          0
+sobel    1080p60  noise       32      2 Y            122880     122880          0
+sobel    1080p60  noise       32      2 X            122880     122880          0
+sobel    1080p60  noise       32      2 mag          122880     122880          0
+sobel    1080p60  noise       32      2 white        122880     122880          0
+sobel    1080p60  noise       32      2 gray         122880     122880          0
+prewitt  1080p60  squares     32      2 Y            122880     122880          0
+prewitt  1080p60  squares     32      2 X            122880     122880          0
+prewitt  1080p60  squares     32      2 mag          122880     122880          0
+prewitt  1080p60  squares     32      2 white        122880     122880          0
+prewitt  1080p60  squares     32      2 gray         122880     122880          0
+sobel    1080p60  squares     32      2 Y            122880     122880          0
+sobel    1080p60  squares     32      2 X            122880     122880          0
+sobel    1080p60  squares     32      2 mag          122880     122880          0
+sobel    1080p60  squares     32      2 white        122880     122880          0
+sobel    1080p60  squares     32      2 gray         122880     122880          0
+prewitt  1080p60  impulse     32      2 Y            122880     122880          0
+prewitt  1080p60  impulse     32      2 X            122880     122880          0
+prewitt  1080p60  impulse     32      2 mag          122880     122880          0
+prewitt  1080p60  impulse     32      2 white        122880     122880          0
+prewitt  1080p60  impulse     32      2 gray         122880     122880          0
+sobel    1080p60  impulse     32      2 Y            122880     122880          0
+sobel    1080p60  impulse     32      2 X            122880     122880          0
+sobel    1080p60  impulse     32      2 mag          122880     122880          0
+sobel    1080p60  impulse     32      2 white        122880     122880          0
+sobel    1080p60  impulse     32      2 gray         122880     122880          0
+prewitt  720p60   noise       32      2 Y             81920      81920          0
+prewitt  720p60   noise       32      2 X             81920      81920          0
+prewitt  720p60   noise       32      2 mag           81920      81920          0
+prewitt  720p60   noise       32      2 white         81920      81920          0
+prewitt  720p60   noise       32      2 gray          81920      81920          0
+sobel    720p60   noise       32      2 Y             81920      81920          0
+sobel    720p60   noise       32      2 X             81920      81920          0
+sobel    720p60   noise       32      2 mag           81920      81920          0
+sobel    720p60   noise       32      2 white         81920      81920          0
+sobel    720p60   noise       32      2 gray          81920      81920          0
+prewitt  720p60   squares     32      2 Y             81920      81920          0
+prewitt  720p60   squares     32      2 X             81920      81920          0
+prewitt  720p60   squares     32      2 mag           81920      81920          0
+prewitt  720p60   squares     32      2 white         81920      81920          0
+prewitt  720p60   squares     32      2 gray          81920      81920          0
+sobel    720p60   squares     32      2 Y             81920      81920          0
+sobel    720p60   squares     32      2 X             81920      81920          0
+sobel    720p60   squares     32      2 mag           81920      81920          0
+sobel    720p60   squares     32      2 white         81920      81920          0
+sobel    720p60   squares     32      2 gray          81920      81920          0
+prewitt  720p60   impulse     32      2 Y             81920      81920          0
+prewitt  720p60   impulse     32      2 X             81920      81920          0
+prewitt  720p60   impulse     32      2 mag           81920      81920          0
+prewitt  720p60   impulse     32      2 white         81920      81920          0
+prewitt  720p60   impulse     32      2 gray          81920      81920          0
+sobel    720p60   impulse     32      2 Y             81920      81920          0
+sobel    720p60   impulse     32      2 X             81920      81920          0
+sobel    720p60   impulse     32      2 mag           81920      81920          0
+sobel    720p60   impulse     32      2 white         81920      81920          0
+sobel    720p60   impulse     32      2 gray          81920      81920          0
+sobel    1080p60  noise     1080      1 X           2073600    2073600          0
+prewitt  1080p60  noise     1080      1 Y           2073600    2073600          0
+
+cases: 62, output words compared: 10291200, cases with any mismatch: 0
+
+## Derived from the RTL outputs (second frame of each short run)
+prewitt greyscale bypass: impulse (row 16, col 960) displayed at (d_line, d_col, value) = [(0, 2, 253)]
+prewitt Y gradient impulse response (d_line, d_col, weight): [(0, 4, 1), (1, 2, -1), (1, 3, 1), (2, 2, 1), (2, 4, -1), (3, 3, -1)]
+prewitt X gradient impulse response (d_line, d_col, weight): [(0, 4, -1), (1, 2, 1), (1, 4, -1), (2, 2, 1), (2, 4, -1), (3, 2, 1)]
+sobel greyscale bypass: impulse (row 16, col 960) displayed at (d_line, d_col, value) = [(0, 2, 253)]
+sobel Y gradient impulse response (d_line, d_col, weight): [(0, 4, 1), (1, 2, -1), (1, 3, 2), (2, 2, 1), (2, 4, -1), (3, 3, -2)]
+sobel X gradient impulse response (d_line, d_col, weight): [(0, 4, -1), (1, 2, 1), (1, 4, -2), (2, 2, 1), (2, 4, -1), (3, 2, 2)]
+1080p60 Y mode, black frame: (white columns, first white column) per line: [(310, 1610)] over 32 lines; lines fully white: 0
+720p60 Y mode, black frame: (white columns, first white column) per line: [(0, None), (1280, 0)] over 32 lines; lines fully white: 16
+
+Agreement with the textbook filter on the noise frame, 1080p timing, best of 35 alignments (d_line 0..4, d_col 0..6):
+  prewitt Y   vs |G| saturated: 0.46% of 36386 px (best at d_line 2, d_col 5)
+  prewitt Y   vs G mod 256 (RTL's own wrap): 0.46% of 36386 px (best at d_line 3, d_col 2)
+  prewitt X   vs |G| saturated: 0.50% of 36386 px (best at d_line 1, d_col 3)
+  prewitt X   vs G mod 256 (RTL's own wrap): 0.56% of 36386 px (best at d_line 1, d_col 3)
+  prewitt mag vs |G| saturated: 0.32% of 36386 px (best at d_line 4, d_col 6)
+  sobel Y   vs |G| saturated: 0.44% of 36386 px (best at d_line 3, d_col 4)
+  sobel Y   vs G mod 256 (RTL's own wrap): 0.44% of 36386 px (best at d_line 2, d_col 2)
+  sobel X   vs |G| saturated: 0.41% of 36386 px (best at d_line 3, d_col 0)
+  sobel X   vs G mod 256 (RTL's own wrap): 0.45% of 36386 px (best at d_line 3, d_col 3)
+  sobel mag vs |G| saturated: 0.23% of 36386 px (best at d_line 3, d_col 0)
+  (two independent uniform 8-bit values agree 1/256 = 0.39% of the time; noise makes G mod 256 near uniform)

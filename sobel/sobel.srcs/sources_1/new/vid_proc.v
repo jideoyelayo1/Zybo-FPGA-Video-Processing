@@ -58,7 +58,7 @@ assign {red, blu, gre} = i_vid_data;
 
 // gray stream
 always @ (posedge clk) begin 
- gray = (red>>2)+(red>>5)+(red>>6)+(gre>>1)+(gre>>4)+(gre>>5)+(blu>>3);
+ gray <= (red>>2)+(red>>5)+(red>>6)+(gre>>1)+(gre>>4)+(gre>>5)+(blu>>3);
 end
 
 // Line Buffer reading and writing
@@ -166,7 +166,7 @@ always @ (posedge clk) begin
     end
 end
 
-sqrt_fn (
+sqrt_fn sqrt_inst (
     .x(sobelProd),
     .y(sobelRes)
 );
